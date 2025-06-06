@@ -1,115 +1,59 @@
-# Frontend Mentor - Browser extensions manager UI solution
+# Extensions Manager UI — Bug Fix Showcase
 
-This is a solution to the [Browser extensions manager UI challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This project demonstrates my ability to fix front-end layout bugs and enhance UI/UX for client-facing web applications. Below are the before (broken) and after (polished) states of the same project.
 
-## Table of contents
+# Overview
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- Tech Stack: HTML, CSS, JavaScript.
+- JSON Source: Dynamically loaded extension list from data.json.
+- Purpose: Display browser extension cards with filters and theme toggle.
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+# Issues in the broken layout
 
-## Overview
+In the broken version of the site, the following problems existed:
 
-### The challenge
+## Layout & Structure Problems
+- Extension cards were stacked vertically — no grid layout.
+- No responsive design — looked broken on smaller or larger screens.
+- Header and filters were misaligned and stacked instead of side-by-side.
 
-Users should be able to:
+## Styling Issues
+- Body background was bright pink — poor color contrast.
+- Font was changed to Comic Sans — unprofessional appearance.
+- Buttons had dashed borders and clashing colors (yellow/red/green).
+- Overly large paddings and element spacing made layout look unbalanced.
 
-- Toggle extensions between active and inactive states
-- Filter active and inactive extensions
-- Remove extensions from the list
-- Select their color theme
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+## Functionality Problems
+- The light/dark theme toggle was labeled awkwardly and looked broken.
+- Filter buttons were labeled inconsistently: “Actives”, “Inactive Ones”.
+- Extension cards had unstyled or oversized buttons and switches.
+- No consistent UI flow between cards and layout.
 
-### Screenshot
 
-![](./screenshot.jpg)
+# Bug Fixes and Enhancements:
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+I fixed all the above issues and added enhancements to produce a professional and modern UI.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+## Layout and Responsiveness
+-Introduced a CSS grid layout with:
+  1 column on mobile
+  2 columns on tablets
+  3 columns on desktops (as per client preview image)
+-Used media queries for responsive behavior.
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+## Professional Styling
+- Replaced Comic Sans with "Noto Sans" font.
+- Background: Switched to #0d1117 (dark mode) and #ffffff (light mode).
+- Used consistent modern styling with rounded corners and subtle shadows.
+- Standardized color palette with green buttons for active states, red for delete, and neutral toggles.
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+## Features Added / Fixed
 
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-## My process
-
-### Built with
-
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
-### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+-Theme Toggle Button to switch between light and dark mode.
+-Filter Buttons ("All", "Active", "Inactive") now behave as expected.
+  Cards now include:
+  Logo
+  Name
+  Description
+  Remove button
+  Toggle switch (for activating/deactivating extensions)
